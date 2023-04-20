@@ -1,5 +1,5 @@
 // Write your code here
-import Component from 'react'
+import {Component} from 'react'
 import SuggestionItem from '../SuggestionItem'
 
 import './index.css'
@@ -17,9 +17,9 @@ class GoogleSuggestions extends Component {
 
   render() {
     const {searchInput} = this.state
-    const {suggestionList} = this.props
-    const searchResults = suggestionList.filter(eachSuggestion =>
-      eachSuggestion.Suggestions.toLowerCase().includes(
+    const {suggestionsList} = this.props
+    const searchResults = suggestionsList.filter(eachSuggestion =>
+      eachSuggestion.Suggestion.toLowerCase().includes(
         searchInput.toLowerCase(),
       ),
     )
